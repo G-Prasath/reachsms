@@ -42,4 +42,27 @@
     .login-btn{
         @apply text-primary border-[1px] border-primary px-6 py-2 uppercase text-[12px] rounded-sm hover:bg-primary hover:text-white duration-300 raleway font-semibold tracking-[2px]
     }
+    .fade_right{
+        @apply animate-[fadeInRight_.5s_ease-in-out]
+    }
+    .fade_left{
+        @apply animate-[fadeInLeft_.5s_ease-in-out]
+    }
+
+    /* navbar */
+    .nav_li{
+        @apply mb-6 hover:text-primary px-4
+    }
+    .nav_anchor{
+        @apply flex flex-col justify-center items-center relative
+    }
+    .nav_tooltip{
+        @apply absolute right-[-100px] bg-primary px-2 py-1 text-white flex items-center justify-center font-semibold min-w-[75px] hidden 
+    }
+
+
+    .bor{
+        @apply border-2 border-primary
+    }
+    
 }

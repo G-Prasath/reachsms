@@ -1,10 +1,12 @@
 import React from 'react'
-import Login from './Login/page'
+import BothNav from './BothNav/page'
+
+
 
 const page = () => {
   return (
     <>
-      <Login />
+      <BothNav/>
     </>
   )
 }
