@@ -7,11 +7,11 @@ import { IoPlayCircle } from "react-icons/io5";
 import { GoDatabase } from "react-icons/go";
 
 const DashboardCard = () => {
-  const [mouseEnter, setMouseEnter] = useState(false)
+  const [mouseEnter, setMouseEnter] = useState(false)  
 
   return (
     <>
-      <div className="w-full py-[20px] px-[20px] my-[10px] flex flex-col items-start shadow-cardShadow bg-white rounded-sm relative" onMouseEnter={() => { setMouseEnter(true) }} onMouseLeave={() => { setMouseEnter(false) }}>
+      <div className="w-full py-[20px] px-[20px] my-[10px] flex flex-col items-start shadow-cardShadow bg-white rounded-sm relative z-10 max-md:z-0" onMouseEnter={() => { setMouseEnter(true) }} onMouseLeave={() => { setMouseEnter(false) }}>
 
         <div className={`tooltip w-full border-2 border-md absolute top-[-65%] left-0 bg-card_hover_bg rounded-2xl justify-center ${mouseEnter ? 'flex fade_right' : 'hidden'}`}>
           <div className='arrow h-[30px] w-[30px] absolute -bottom-2 transform rotate-45 bg-card_hover_bg z-0'></div>
@@ -43,6 +43,7 @@ const DashboardCard = () => {
             </div>
           </div>
         </div>
+
         <div className="inline-flex justify-between relative w-full mb-[3rem]">
           <p className='text-[14px] jost'>Name of Client</p>
           <p className='text-white bg-status_clr text-[13px] rounded-[4px] px-[.75rem] jost flex items-center'>Status</p>
@@ -58,7 +59,3 @@ const DashboardCard = () => {
 }
 
 export default DashboardCard
-
-
-// box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-// box-shadow: ;

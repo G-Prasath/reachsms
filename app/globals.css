@@ -48,9 +48,10 @@
     .fade_left{
         @apply animate-[fadeInLeft_.5s_ease-in-out]
     }
-    .rotate_cross{
-        @apply animate-wave 2s linear infinite
+    .profileFade{
+        @apply animate-[peofileFade_.5s_ease-in-out]
     }
+    
 
     /* navbar */
     .nav_li{

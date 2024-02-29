@@ -45,9 +45,12 @@ import { BiUser } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdLogout } from "react-icons/md";
 
+import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
+
 
 export {
-    AiOutlineHome, LuSend, BsVoicemail, FaEnvelopeOpenText, FiUsers, FiBook, MdCampaign, IoDocumentOutline, FiUser, FiSearch, RxCross2, FaFileInvoice, BiUser, IoSettingsOutline, MdLogout
+    AiOutlineHome, LuSend, BsVoicemail, FaEnvelopeOpenText, FiUsers, FiBook, MdCampaign, IoDocumentOutline, FiUser, FiSearch, RxCross2, FaFileInvoice, BiUser, IoSettingsOutline, MdLogout, AiOutlineMenuUnfold,IoClose
 }
 
 

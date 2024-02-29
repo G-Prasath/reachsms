@@ -37,6 +37,7 @@ const config: Config = {
           '0%': { transform: 'translateX(-40%)', opacity: '0' },
           '100%': { transform: 'translateX(0px)', opacity: '1' },
         },
+        
         wave:{
           '0%': { transform: 'rotate(0.0deg)' },
           '10%': { transform: 'rotate(14deg)' },
@@ -46,6 +47,11 @@ const config: Config = {
           '50%': { transform: 'rotate(10.0deg)' },
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' }
+        },
+
+        peofileFade: {
+          '0%': { transform: 'translateX(0px)', opacity: '0-' },
+          '100%': { transform: 'translateX(40%)', opacity: '0' },
         }
       },
       boxShadow: {
