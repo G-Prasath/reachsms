@@ -36,8 +36,9 @@ const page = () => {
             </div>
 
             <section className='w-full flex justify-between fixed z-10'>
-                <div className={`flex justify-start h-screen max-w-max max-md:${mobileNav ? 'flex fade_left' : 'hidden duration-1000'}`}>
-                    
+
+                <div className={`flex justify-start h-screen max-w-max max-md:${mobileNav ? 'flex fade_left' : 'hidden'}`}>
+
                     {/* --------- Left Bar ------------  */}
                     <div className='left_nav w-[70px] max-md:w-[60px] flex items-center flex-col shadow-navShadow bg-white'>
                         <div className="logo w-full">
@@ -168,7 +169,8 @@ const page = () => {
                     </div>
                 </div>
 
-                <div className={`flex justify-end max-w-max max-md:${leftbar ? 'flex' : 'hidden'}`}>
+                <div className={`flex justify-end max-w-max max-md:hidden ${leftbar ? 'flex' : ''} `}>
+
                     {/* ------------ Right Bar --------------  */}
                     <div className='right_nav w-[230px] flex flex-col items-center sticky top-0'>
 
@@ -204,6 +206,7 @@ const page = () => {
                         </div>
                     </div>
                 </div>
+
             </section>
         </section>
     )
