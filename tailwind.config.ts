@@ -36,11 +36,22 @@ const config: Config = {
         fadeInLeft: {
           '0%': { transform: 'translateX(-40%)', opacity: '0' },
           '100%': { transform: 'translateX(0px)', opacity: '1' },
+        },
+        wave:{
+          '0%': { transform: 'rotate(0.0deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '20%': { transform: 'rotate(-8deg)' },
+          '30%': { transform: 'rotate(14deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(10.0deg)' },
+          '60%': { transform: 'rotate(0.0deg)' },
+          '100%': { transform: 'rotate(0.0deg)' }
         }
       },
       boxShadow: {
         cardShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-        navShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;'
+        navShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+        profileShadow: 'rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;'
       }
     },
   },

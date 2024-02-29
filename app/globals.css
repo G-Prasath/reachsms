@@ -48,10 +48,13 @@
     .fade_left{
         @apply animate-[fadeInLeft_.5s_ease-in-out]
     }
+    .rotate_cross{
+        @apply animate-wave 2s linear infinite
+    }
 
     /* navbar */
     .nav_li{
-        @apply mb-6 hover:text-primary px-4
+        @apply mb-6 hover:text-primary px-4 text-hash_clr
     }
     .nav_anchor{
         @apply flex flex-col justify-center items-center relative

@@ -1,12 +1,11 @@
 import React from 'react'
-import BothNav from './BothNav/page'
-
+import Dashboard from './Dashboard/page'
 
 
 const page = () => {
   return (
     <>
-      <BothNav/>
+      <Dashboard />
     </>
   )
 }

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { Jost } from 'next/font/google'
 import "./globals.css";
+import Bothnav from './components/Bothnav/page'
 
 
 
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${raleway_init.variable} ${jost_init.variable} bg-hole_body`}>
 
+        <Bothnav/>
         {children}
 
       </body>

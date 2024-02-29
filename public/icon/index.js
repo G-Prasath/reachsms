@@ -37,10 +37,17 @@ import { FiBook } from "react-icons/fi";
 import { MdCampaign } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
+import { RxCross2 } from "react-icons/rx";
+import { FaFileInvoice } from "react-icons/fa";
+
+
+import { BiUser } from "react-icons/bi";
+import { IoSettingsOutline } from "react-icons/io5";
+import { MdLogout } from "react-icons/md";
 
 
 export {
-    AiOutlineHome, LuSend, BsVoicemail, FaEnvelopeOpenText, FiUsers, FiBook, MdCampaign, IoDocumentOutline, FiUser, FiSearch
+    AiOutlineHome, LuSend, BsVoicemail, FaEnvelopeOpenText, FiUsers, FiBook, MdCampaign, IoDocumentOutline, FiUser, FiSearch, RxCross2, FaFileInvoice, BiUser, IoSettingsOutline, MdLogout
 }
 
 
