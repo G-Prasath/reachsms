@@ -13,7 +13,7 @@ const DashboardCard = () => {
     <>
       <div className="w-full py-[20px] px-[20px] my-[10px] flex flex-col items-start shadow-cardShadow bg-white rounded-sm relative z-10 max-md:z-0" onMouseEnter={() => { setMouseEnter(true) }} onMouseLeave={() => { setMouseEnter(false) }}>
 
-        <div className={`tooltip w-full border-2 border-md absolute top-[-65%] left-0 bg-card_hover_bg rounded-2xl justify-center ${mouseEnter ? 'flex fade_right' : 'hidden'}`}>
+        <div className={`tooltip w-full border-2 border-md absolute top-[-65%] left-0 bg-card_hover_bg rounded-2xl justify-center ${mouseEnter ? 'flex fade_right' : 'hidden'} max-sm:hidden`}>
           <div className='arrow h-[30px] w-[30px] absolute -bottom-2 transform rotate-45 bg-card_hover_bg z-0'></div>
 
 

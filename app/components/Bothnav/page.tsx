@@ -22,7 +22,7 @@ const page = () => {
 
     return (
 
-        <section>
+        <>
 
             <div className={`shadow-navShadow w-full bg-white z-50 fixed px-4 max-h-max hidden max-md:block ${mobileNav ? '-translate-y-40 opacity-0 duration-1000 overflow-hidden' : 'opacity-1 duration-1000'}`}>
                 <div className='flex items-center justify-start gap-x-3 h-ull'>
@@ -35,9 +35,9 @@ const page = () => {
                 </div>
             </div>
 
-            <section className='w-full flex justify-between fixed z-10'>
+            {/* <section className='w-full flex justify-between fixed'> */}
 
-                <div className={`flex justify-start h-screen max-w-max max-md:${mobileNav ? 'flex fade_left' : 'hidden'}`}>
+                <div className={`flex justify-start h-screen max-w-max max-md:${mobileNav ? 'flex fade_left' : 'hidden'} fixed`}>
 
                     {/* --------- Left Bar ------------  */}
                     <div className='left_nav w-[70px] max-md:w-[60px] flex items-center flex-col shadow-navShadow bg-white'>
@@ -50,7 +50,7 @@ const page = () => {
                             <ul className='w-full flex flex-col justify-center items-center'>
 
                                 <li className='nav_li' onMouseEnter={() => handleHover('l1')} onMouseLeave={() => handleRemove()} >
-                                    <a href="javasvcript:;" className='nav_anchor'>
+                                    <a href="/Dashboard" className='nav_anchor'>
                                         <AiOutlineHome fontSize={20} />
                                         <div className={`nav_tooltip ${menuTip === 'l1' ? 'flex fade_right' : 'hidden'}`}>
                                             <div className='w-[10px] h-[10px] bg-primary left-[-4px] absolute rotate-45'></div>
@@ -81,7 +81,7 @@ const page = () => {
 
 
                                 <li className='nav_li' onMouseEnter={() => handleHover('l4')} onMouseLeave={() => handleRemove()}>
-                                    <a href="javasvcript:;" className='nav_anchor'>
+                                    <a href="/email/send" className='nav_anchor'>
                                         <FaEnvelopeOpenText fontSize={20} />
                                         <div className={`nav_tooltip ${menuTip === 'l4' ? 'flex fade_right' : 'hidden'}`}>
                                             <div className='w-[10px] h-[10px] bg-primary left-[-4px] absolute rotate-45'></div>
@@ -169,7 +169,7 @@ const page = () => {
                     </div>
                 </div>
 
-                <div className={`flex justify-end max-w-max max-md:hidden ${leftbar ? 'flex' : ''} `}>
+                <div className={`flex justify-end max-md:hidden ${leftbar ? 'flex' : ''} absolute right-0`}>
 
                     {/* ------------ Right Bar --------------  */}
                     <div className='right_nav w-[230px] flex flex-col items-center sticky top-0'>
@@ -181,7 +181,7 @@ const page = () => {
                         </div>
 
 
-                        <div className={`w-full h-screen bg-white shadow-profileShadow ${leftbar ? 'fade_right' : ' translate-x-40 opacity-0 duration-1000 overflow-hidden'}`}>
+                        <div className={`w-full h-screen bg-white shadow-profileShadow ${leftbar ? 'fade_right' : 'opacity-0 duration-1000 overflow-hidden'}`}>
 
                             <ul className='flex items-end flex-col gap-y-[25px] absolute top-[25%] left-[10%]'>
                                 <li className=''>
@@ -207,8 +207,8 @@ const page = () => {
                     </div>
                 </div>
 
-            </section>
-        </section>
+            {/* </section> */}
+        </>
     )
 }
 

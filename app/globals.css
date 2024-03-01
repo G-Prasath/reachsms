@@ -2,71 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-.raleway{
+.raleway {
     font-family: var(--font-raleway);
 }
-.jost{
+
+.jost {
     font-family: var(--font-young-sans);
 }
 
-@layer components{
-    .heading{
-        @apply text-[24px] uppercase text-secondary py-[20px] px-0
+@layer components {
+    .heading {
+        @apply text-[26px] uppercase text-secondary py-[20px] px-0
     }
-    .login_tab{
+
+    .login_tab {
         @apply text-sm text-swap px-3 py-2
     }
-    .login_hover{
+
+    .login_hover {
         @apply cursor-pointer border-b-[.5px] border-b-swap-hover_clr
     }
-    .login_click{
+
+    .login_click {
         @apply text-primary border-b-[1px] border-b-swap-click_border
     }
-    .danger_box{
-       @apply w-full bg-error_box-bg_clr border-[1px] border-error_box-border_clr text-error_box-text_clr py-[1rem] px-[1.25rem] my-[1rem] rounded-md
+
+    .danger_box {
+        @apply w-full bg-error_box-bg_clr border-[1px] border-error_box-border_clr text-error_box-text_clr py-[1rem] px-[1.25rem] my-[1rem] rounded-md
     }
-    .input-feilds{
+
+    .input-feilds {
         @apply flex items-center m-auto w-full relative
     }
-    
-    .input-box{
+
+    .input-box {
         @apply border-[1px] border-swap px-[10px] py-[10px] gap-x-4 my-[10px] hover:border-swap-hover_clr w-full outline-none pl-[40px] focus:border-swap-click_border rounded-md
     }
-    .login-btn{
+
+    .login-btn {
         @apply text-primary border-[1px] border-primary px-6 py-2 uppercase text-[12px] rounded-sm hover:bg-primary hover:text-white duration-300 raleway font-semibold tracking-[2px]
     }
-    .fade_right{
+
+    .fade_right {
         @apply animate-[fadeInRight_.5s_ease-in-out]
     }
-    .fade_left{
+
+    .fade_left {
         @apply animate-[fadeInLeft_.5s_ease-in-out]
     }
-    .profileFade{
+    .fade_top {
+        @apply animate-[fadeInTop_.5s_ease-in-out]
+    }
+
+    .profileFade {
         @apply animate-[peofileFade_.5s_ease-in-out]
     }
-    
+
 
     /* navbar */
-    .nav_li{
+    .nav_li {
         @apply mb-6 hover:text-primary px-4 text-hash_clr
     }
-    .nav_anchor{
+
+    .nav_anchor {
         @apply flex flex-col justify-center items-center relative
     }
-    .nav_tooltip{
-        @apply absolute right-[-100px] bg-primary px-2 py-1 text-white flex items-center justify-center font-semibold min-w-[75px] hidden 
+
+    .nav_tooltip {
+        @apply absolute right-[-100px] bg-primary px-2 py-1 text-white flex items-center justify-center font-semibold min-w-[75px] hidden
     }
 
+    /* --------------- Send email Page ----------------- */
 
-    .bor{
+    .tab_active{
+        @apply text-swap-click_border border-b-[1px] border-b-swap-click_border
+    }
+    .tab_hover{
+        @apply border-b-[1px] border-b-hash_clr
+    }
+    .inputbox_style{
+        @apply border-[1px] border-hash_clr outline-none w-full px-[10px] py-[5px] mt-[5px] rounded-md hover:border-secondary focus:border-swap-click_border
+    }
+    .hole_box{
+        @apply w-full bg-white max-h-max mt-[30px] pb-[10px]
+    }
+
+    .emailbox{
+        @apply border-b-[2px] border-b-swap-hover_clr
+    }
+    .email_editor{
+        @apply text-hash_clr cursor-pointer hover:text-swap-hover_clr p-[5px] max-md:px-[4px]
+    }
+    .email_icons{
+        @apply text-[17px] max-md:text-[14px]
+    }
+
+    .bor {
         @apply border-2 border-primary
     }
-    
+
 }

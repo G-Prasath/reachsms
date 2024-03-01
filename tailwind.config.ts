@@ -37,6 +37,10 @@ const config: Config = {
           '0%': { transform: 'translateX(-40%)', opacity: '0' },
           '100%': { transform: 'translateX(0px)', opacity: '1' },
         },
+        fadeInTop: {
+          '0%': { transform: 'translateY(-40%)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
         
         wave:{
           '0%': { transform: 'rotate(0.0deg)' },
@@ -57,7 +61,8 @@ const config: Config = {
       boxShadow: {
         cardShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
         navShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-        profileShadow: 'rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;'
+        profileShadow: 'rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;',
+        textboxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
       }
     },
   },

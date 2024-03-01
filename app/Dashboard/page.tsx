@@ -6,7 +6,7 @@ import Linechart from '../components/Linechart'
 
 const page = () => {
     return (
-        <section className='w-max-container h-min-screen px-[15%] max-md:py-[20%] py-[5%]'>
+        <section className='max-w-max h-min-screen px-[15%] max-md:py-[20%] py-[5%]'>
             <div>
                 <div className="heading">
                     <h2>Dashboard</h2>

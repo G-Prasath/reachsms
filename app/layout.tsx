@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway_init.variable} ${jost_init.variable} bg-hole_body`}>
+      <body className={`${raleway_init.variable} ${jost_init.variable} bg-hole_body relative`}>
 
         <Bothnav/>
         {children}
