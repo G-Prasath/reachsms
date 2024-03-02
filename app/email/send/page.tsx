@@ -17,6 +17,11 @@ import { IoIosLink } from "react-icons/io";
 import { GrFormUpload } from "react-icons/gr";
 import { MdOutlineFitScreen } from "react-icons/md";
 import { FaRegQuestionCircle } from "react-icons/fa";
+// import type { DatePickerProps } from 'antd';
+import { DatePicker } from 'antd';
+import { Button, TimePicker } from 'antd';
+
+// import Datechoose from '@/app/components/Datechoose';
 
 
 
@@ -27,7 +32,9 @@ const page = () => {
     const [dropdown, setDropdown] = useState(false);
     const [dropdownOptions, setDropdownOptions] = useState('Choose Options')
     const [emailTab, setEmailTab] = useState('editor')
-
+    const [open, setOpen] = useState(false);
+    const [toggle, setToogle] = useState(false)
+    const [toggleHover, setToggleHover] = useState(false)
 
 
     const handletabClick = (arg: any) => {
@@ -37,7 +44,6 @@ const page = () => {
         setDropdownOptions(e.target.textContent)
         setDropdown(false)
     }
-
 
 
     return (
@@ -224,25 +230,51 @@ const page = () => {
                 </div>
 
                 {/* ----------------- Box 5 ------------------  */}
-                <div className='hole_box shadow-boxShadow-profileShadow hover:shadow-textboxShadow duration-300'>
+                <div className='hole_box shadow-boxShadow-profileShadow hover:shadow-textboxShadow duration-300 relative pb-[20px] mb-[30px]'>
                     <div className='text-[16px] jost font-[500] text-hash_clr px-[20px] py-[15px] border-b-[1px] border-b-hash_clr flex justify-between'>
                         <p>Campaign</p>
+                        <div className='flex items-center'>
 
+                            <div className={`absolute right-[-80px] max-md:right-0 -top-6 bg-card_hover_bg text-white py-[5px] rounded-md px-[10px] flex justify-center ${toggleHover ? 'scale-1 duration-500' : 'scale-0'}`}>
+                                 <div className='w-[10px] h-[10px] bg-card_hover_bg absolute -rotate-45 -bottom-[5px] max-md: right-[40px]'></div>   
+                                <p className='text-[14px]'>Enable if you want schedule the message</p>
+                            </div>
 
-                        <div>
-                            <div className="flex items-center justify-center w-full">
+                            <div className="flex items-center justify-center w-full" onMouseEnter={() => setToggleHover(true)} onMouseLeave={() => setToggleHover(false)}>
                                 <label htmlFor="toggle" className="flex items-center cursor-pointer">
-                                    <input type="checkbox" id="toggle" className="sr-only peer" />
-                                        <div className="block relative bg-primary shadow-textboxShadow  w-14 h-8 p-1 rounded-full before:absolute before:bg-white before:w-6 before:h-6 before:p-2 before:rounded-full before:transition-all before:duration-500 before:left-1 peer-checked:before:left-7 peer-checked:before:bg-white">
-                                        </div>
+                                    <input type="checkbox" id="toggle" className="sr-only peer" onChange={() => setToogle(!toggle)} />
+                                    <div className="block relative bg-white shadow-textboxShadow  w-12 h-7 p-1 rounded-full before:absolute before:bg-white before:shadow-textboxShadow before:w-5 before:h-5 before:p-2 before:rounded-full before:transition-all before:duration-500 before:left-1.5 peer-checked:before:left-6 peer-checked:before:bg-white peer-checked:bg-primary">
+                                    </div>
                                 </label>
                             </div>
                         </div>
                     </div>
+
+                    <div className={`flex items-center w-full px-[20px] gap-x-[20px] max-md:flex-col max-md:gap-y-4 ${toggle ? '' : 'pointer-events-none opacity-[.6]'}`}>
+                        <div className='w-1/2 max-md:w-full flex flex-col gap-y-2'>
+                            <div className='py-[5px]'>
+                                <p className='mb-[5px] text-[14px] jost font-[600]'>Date</p>
+                                <DatePicker style={{ width: '100%' }} />
+                            </div>
+                            <div className='py-[5px]'>
+                                <p className='mb-[5px] text-[14px] jost font-[600]'>Time</p>
+                                <TimePicker
+                                    style={{ width: '100%' }}
+                                    open={open}
+                                    onOpenChange={setOpen}
+                                    renderExtraFooter={() => (
+                                        <Button size="small" type="primary" onClick={() => setOpen(false)}>
+                                            OK
+                                        </Button>
+                                    )}
+                                />
+                            </div>
+                        </div>
+                        <div className='w-1/2 max-md:w-full flex items-center justify-center text-secondary'>
+                            <p>Note : Promotional email time is between 9:00 AM to 9:00 PM only</p>
+                        </div>
+                    </div>
                 </div>
-
-
-
             </div>
 
         </section>
