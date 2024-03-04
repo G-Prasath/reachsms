@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './Login/page'
 import Dashboard from './Dashboard/page'
 import Email from './email/send/page'
+import Edit from './account/edit/page'
 
 
 const page = () => {
@@ -9,8 +10,8 @@ const page = () => {
     <>
       {/* <Login/> */}
       {/* <Dashboard /> */}
-      <Email/>
-      
+      {/* <Email/> */}
+      <Edit/>
     </>
   )
 }
