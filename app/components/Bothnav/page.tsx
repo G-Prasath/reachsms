@@ -191,7 +191,7 @@ const page = () => {
                                     </a>
                                 </li>
                                 <li className=''>
-                                    <a href="javascript:;" className='flex items-center gap-x-3'>
+                                    <a href="/account/edit" className='flex items-center gap-x-3'>
                                         <p className='font-semibold text-secondary uppercase text-[14px]'>Change Password</p>
                                         <IoSettingsOutline fontSize={25} className='text-secondary' />
                                     </a>

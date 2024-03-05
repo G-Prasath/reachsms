@@ -54,7 +54,7 @@ const page = () => {
     return (
         <section>
 
-            <div className='px-[15%] max-md:px-[10%] w-full pt-[4%] max-md:pt-[15%] z-50'>
+            <div className='px-[15%] max-md:px-[10%] w-full pt-[4%] max-md:pt-[15%] z-50 mb-[50px]'>
 
                 {/* ------------------- Heading -----------  */}
                 <div className='flex justify-between'>
@@ -290,7 +290,7 @@ const page = () => {
                         <div className='flex items-center'>
 
                             <div className={`absolute right-[-80px] max-md:right-0 -top-6 bg-card_hover_bg text-white py-[5px] rounded-md px-[10px] flex justify-center ${toggleHover ? 'scale-1 duration-500' : 'scale-0'}`}>
-                                <div className='w-[10px] h-[10px] bg-card_hover_bg absolute -rotate-45 -bottom-[5px] max-md: right-[40px] '></div>
+                                <div className='w-[10px] h-[10px] bg-card_hover_bg absolute -rotate-45 -bottom-[5px] max-md:right-[40px] right-[50%] '></div>
                                 <p className='text-[14px]'>Enable if you want schedule the message</p>
                             </div>
 
@@ -301,6 +301,7 @@ const page = () => {
                                     </div>
                                 </label>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -327,8 +328,11 @@ const page = () => {
                         <div className='w-1/2 max-md:w-full flex items-center justify-center text-secondary'>
                             <p>Note : Promotional email time is between 9:00 AM to 9:00 PM only</p>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
+
+                {/* ------------------- Submit Button ------------  */}
+                <a href="javascript:;" className='px-[30px] py-[15px] bg-primary text-white uppercase rounded-full text-[12px] font-semibold'>Submit</a>
             </div>
 
         </section>
