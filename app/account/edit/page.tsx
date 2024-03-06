@@ -14,7 +14,9 @@ const page = () => {
 
     console.log(popup);
 
-
+    const handleSuccess = () => {
+        setStatus(false)
+    }
     const handletabClick = (arg: any) => {
         setTabActive(arg)
     }
@@ -32,12 +34,12 @@ const page = () => {
             </div>
 
             {/* -------------- Success Popup -----------------  */}
-            <div className={`w-full bg-green-800 flex my-[10px] px-[30px] py-[10px] ${popup === 'close'? 'hidden' : popup === 'show' ? '' : ''}`}>
+            <div className={`w-full bg-green-800 flex my-[10px] px-[30px] py-[10px] ${status ? 'fade_left' : 'hidden'}`}>
                 <div className='flex items-center justify-start w-full'>
                     <p className='text-white font-semibold'>Successfully Updated Profile.</p>
                 </div>
                 <div className='flex justify-end items-center w-full'>
-                    <IoCloseCircleOutline fontSize={20} className='text-white cursor-pointer' onClick={() => setPopup('close')} />
+                    <IoCloseCircleOutline fontSize={20} className='text-white cursor-pointer' onClick={() => setStatus(false)} />
                 </div>
             </div>
 
@@ -106,7 +108,7 @@ const page = () => {
                         {/* ---------- Header -----------  */}
                         <div className='flex items-center justify-between w-full px-[20px] py-[10px] border-b-[1px] border-b-hash_clr'>
                             <p className='font-semibold text-hash_clr'>Contact Info</p>
-                            <div className={`relative border-[1.5px] rounded-full cursor-pointer p-1 ${commonVar === 'hover' ? 'border-[1.5px] border-green-400' : 'border-hash_clr border-dashed'}`} onMouseEnter={() => { setCommonVar('hover'), setPopup('hover2') }} onMouseLeave={() => { setCommonVar('leave'), setPopup('leave') }} onClick={() => setPopup('show')}>
+                            <div className={`relative border-[1.5px] rounded-full cursor-pointer p-1 ${commonVar === 'hover' ? 'border-[1.5px] border-green-400' : 'border-hash_clr border-dashed'}`} onMouseEnter={() => { setCommonVar('hover'), setPopup('hover2') }} onMouseLeave={() => { setCommonVar('leave'), setPopup('leave') }} onClick={() => setStatus(true)}>
 
                                 {/* ----------- Popups sectors -------------  */}
                                 <div className={`absolute right-[0px] max-md:right-0 top-[-40px] bg-card_hover_bg text-white py-[5px] rounded-md px-[10px] flex justify-center w-[150px] ${popup === 'hover2' ? 'scale-1 duration-300' : "scale-0"}`}>
